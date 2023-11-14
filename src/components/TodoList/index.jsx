@@ -23,6 +23,10 @@ export default function TodoList() {
         completed: false,
       })
     );
+
+    // reset input
+    setTodoName("");
+    setPriority("Medium");
   };
 
   return (

@@ -11,3 +11,10 @@ export const addTodo = (data) => {
     payload: data,
   }
 }
+
+export const searchFilter = (text) => {
+  return {
+    type: 'filters/searchFilter',
+    payload: text
+  }
+}

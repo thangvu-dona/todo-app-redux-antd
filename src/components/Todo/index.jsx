@@ -1,19 +1,19 @@
-import { Row, Tag, Checkbox } from 'antd';
-import { useState } from 'react';
-import PropTypes from 'prop-types';
+import { Row, Tag, Checkbox } from "antd";
+import { useState } from "react";
+import PropTypes from "prop-types";
 
 const priorityColorMapping = {
-  High: 'red',
-  Medium: 'blue',
-  Low: 'gray',
+  High: "red",
+  Medium: "blue",
+  Low: "gray",
 };
 
 Todo.propTypes = {
   name: PropTypes.string,
-  prioriry: PropTypes.string,
-}
+  priority: PropTypes.string,
+};
 
-export default function Todo({ name = '', prioriry = '' }) {
+export default function Todo({ name = "", priority = "" }) {
   const [checked, setChecked] = useState(false);
 
   const toggleCheckbox = () => {
@@ -22,17 +22,17 @@ export default function Todo({ name = '', prioriry = '' }) {
 
   return (
     <Row
-      justify='space-between'
+      justify="space-between"
       style={{
         marginBottom: 3,
-        ...(checked ? { opacity: 0.5, textDecoration: 'line-through' } : {}),
+        ...(checked ? { opacity: 0.5, textDecoration: "line-through" } : {}),
       }}
     >
       <Checkbox checked={checked} onChange={toggleCheckbox}>
         {name}
       </Checkbox>
-      <Tag color={priorityColorMapping[prioriry]} style={{ margin: 0 }}>
-        {prioriry}
+      <Tag color={priorityColorMapping[priority]} style={{ margin: 0 }}>
+        {priority}
       </Tag>
     </Row>
   );

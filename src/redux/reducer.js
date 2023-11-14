@@ -24,7 +24,7 @@ const rootReducer = (state = initState, action) => {
         ...state,
         todoList: [
           ...state.todoList,
-          { id: 5, name: 'Play Football', completed: false, priority: 'Medium' }
+          action.payload
         ]
       }
     }

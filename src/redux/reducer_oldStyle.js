@@ -2,7 +2,7 @@ const initState = {
   filters: {
     search: '',
     status: 'all',
-    priority: []
+    priorities: []
   },
   todoList: [
     { id: 1, name: 'Learn Yoga', completed: false, priority: 'Medium' },

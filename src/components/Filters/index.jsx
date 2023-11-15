@@ -5,7 +5,12 @@ import {
   priorityFilterChange,
   searchFilter,
   statusFilterChange,
-} from "../../redux/actions";
+} from "./FiltersSlice";
+// import {
+//   priorityFilterChange,
+//   searchFilter,
+//   statusFilterChange,
+// } from "../../redux/actions";
 
 const { Search } = Input;
 
